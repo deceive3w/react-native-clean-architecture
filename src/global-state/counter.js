@@ -2,31 +2,39 @@ import { useEffect, useState } from "react"
 import { getCounter } from "../api/counter"
 
 
-export const useCounter = () =>{
+
+export const useCounter = () => {
     const [loading, setLoading] = useState(true)
     const [counter, setCounter] = useState(null)
     const [number, setNumber] = useState(0)
 
-    useEffect(async ()=>{
-        console.log("use effect")
+    useEffect(() => {
+        setupCounter()
+    }, [])
+
+    const setupCounter = async() =>{
         let counter = await getCounter()
         setLoading(false)
         setCounter(counter)
-        console.log("c", counter)
-    }, [])
+    }
 
-    const increment = () =>{
+
+    const increment = () => {
         let number = counter.increment()
         setNumber(number)
     }
 
-    const decrement = () =>{
+    const decrement = () => {
         let number = counter.decrement()
         setNumber(number)
     }
-    
+
     return {
-        counter, loading, increment,decrement, number
+        counter,
+        loading,
+        increment,
+        decrement,
+        number
     }
-    
+
 }
