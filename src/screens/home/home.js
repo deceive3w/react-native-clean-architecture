@@ -40,7 +40,7 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
-           
+
           <CounterContainer></CounterContainer>
        
           </View>

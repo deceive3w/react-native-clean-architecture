@@ -5,8 +5,8 @@ export default class Counter {
         this.number = initialNumber
     }
 
-
     increment(){
+    
         this.number = this.number+1
         return this.number
     }
@@ -15,4 +15,5 @@ export default class Counter {
         this.number = this.number-1
         return this.number
     }
+
 }

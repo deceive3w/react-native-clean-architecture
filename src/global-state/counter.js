@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react"
+import { getCounter } from "../api/counter"
 
 
 export const useCounter = () =>{
     const [loading, setLoading] = useState(true)
     const [counter, setCounter] = useState(null)
     const [number, setNumber] = useState(0)
+
     useEffect(async ()=>{
+        console.log("use effect")
         let counter = await getCounter()
         setLoading(false)
         setCounter(counter)
+        console.log("c", counter)
     }, [])
 
     const increment = () =>{
@@ -24,4 +28,5 @@ export const useCounter = () =>{
     return {
         counter, loading, increment,decrement, number
     }
+    
 }
