@@ -23,7 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import CounterContainer from './components/counter.container';
+import CounterContainer from './components/CounterContainer';
 
 const App: () => React$Node = () => {
   return (

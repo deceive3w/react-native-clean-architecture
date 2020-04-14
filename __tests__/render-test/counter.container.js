@@ -2,13 +2,13 @@
  * @jest-environment jsdom
  */
 import React from 'react'
-import CounterContainer from '../../src/screens/home/components/counter.container'
-import CounterComponent from '../../src/screens/home/components/counter'
+import CounterContainer from '../../src/screens/home/components/CounterContainer'
+import CounterComponent from '../../src/screens/home/components/Counter'
 
 import Enzyme, { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import TestRenderer from 'react-test-renderer';
-import Counter from '../../src/entities/counter'
+import Counter from '../../src/entities/Counter'
 
 Enzyme.configure({ adapter: new Adapter() });
 

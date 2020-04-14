@@ -1,4 +1,4 @@
-import Counter from '../../src/entities/counter'
+import Counter from '../../src/entities/Counter'
 
 describe('entities Test Counter',()=>{
     it('should can get increament or decreament number',async ()=>{
